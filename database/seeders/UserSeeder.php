@@ -7,6 +7,7 @@ use App\Models\Admin;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Rinvex\Subscriptions\Models\PlanFeature;
 
 class UserSeeder extends Seeder
 {
