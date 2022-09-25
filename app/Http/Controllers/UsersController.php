@@ -27,7 +27,7 @@ class UsersController extends Controller
                     'name' => $user->name,
                     'order_id' => isset($user->orders[0]) ?$user->orders[0]->id :'' ,
                     'order' =>isset($user->orders[0]) ?$user->orders[0]->totalAmount : 00,
-                    'plan' =>$user->planSubscription($user->name) !=null ?  $user->planSubscription($user->name)->ends_at->diffForHumans()  : '--',
+                    'plan' =>$user->planSubscription($user->name) !=null ?  $user->planSubscription($user->name)->ends_at->diffForHumans()  :  $user->planSubscription($user->name),
                     'invoice' =>isset($user->orders[0]->installments[0]->invoices) ? $user->orders[0]->installments[0]->invoices->invoice()->paymentStatus   : '-',
                     'can' => [
                         'edit' => Auth::guard('admin')->user()->can('edit', $user)

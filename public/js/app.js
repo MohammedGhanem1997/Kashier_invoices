@@ -1039,7 +1039,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     )])])]), user.can.edit ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
       href: "/users/".concat(user.id, "/edit"),
-      "class": "text-indigo-600 hover:text-indigo-900"
+      "class": "bg-blue-600 btn text-white rounded py-2 px-4 hover:bg-blue-500"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [_hoisted_24];
@@ -1053,14 +1053,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: function onClick($event) {
         return $setup.showOrder(user.order_id);
       },
-      "class": "text-indigo-600 hover:text-indigo-900"
+      "class": "bg-gray-400 text-white rounded py-2 px-4 hover:bg-blue-500"
     }, " show", 8
     /* PROPS */
     , _hoisted_25), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       onClick: function onClick($event) {
         return $setup.subscribe(user.id);
       },
-      "class": "text-indigo-600 hover:text-indigo-900"
+      "class": "bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
     }, " subscribe", 8
     /* PROPS */
     , _hoisted_26)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);

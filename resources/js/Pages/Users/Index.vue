@@ -60,9 +60,9 @@
                   </div>
                 </td>
                 <td v-if="user.can.edit" class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <Link :href="`/users/${user.id}/edit`" class="text-indigo-600 hover:text-indigo-900"> Edit</Link>
-                  <a    v-on:click= "showOrder( user.order_id)" class="text-indigo-600 hover:text-indigo-900"> show</a>
-                  <a v-on:click="subscribe( user.id)"   class="text-indigo-600 hover:text-indigo-900"> subscribe</a>
+                  <Link :href="`/users/${user.id}/edit`" class="bg-blue-600 btn text-white rounded py-2 px-4 hover:bg-blue-500"> Edit</Link>
+                  <a    v-on:click= "showOrder( user.order_id)" class="bg-gray-400 text-white rounded py-2 px-4 hover:bg-blue-500"> show</a>
+                  <a v-on:click="subscribe( user.id)"   class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"> subscribe</a>
 
 
                 </td>
