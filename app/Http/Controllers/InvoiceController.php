@@ -46,10 +46,11 @@ class InvoiceController extends Controller
     public function store($installment, $response )
     {
 
+
         $invoice=\App\Models\Invoice::create([
 
        'customerName'=> isset($response[ 'customerName'])?$response[ 'customerName']:'-',
-         'transaction_id'=>$response[ '_id'],
+         'transaction_id'=>  isset($response[ '_id'])?$response[ '_id']:'-',
         'totalAmount'=>$response['totalAmount'],
        'dueDate'=>$response['dueDate'],
        'paymentRequestId'=>$response['paymentRequestId'],
