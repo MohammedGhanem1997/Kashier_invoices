@@ -28,6 +28,7 @@ If he chooses over several stages, the system will be recording the data, adding
 3-php artisan key:generate <br>
 4- composer install <br>
 5- composer update <br>
+u can use sqlfile in project https://github.com/MohammedGhanem1997/Kashier_invoices/blob/master/kashier(1).sql 
 6-php artisan migrate <br>
 7-php artisan db:seed <br>
 8-npm i <br>
