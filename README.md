@@ -32,3 +32,11 @@ If he chooses over several stages, the system will be recording the data, adding
 7-php artisan db:seed <br>
 8-npm i <br>
 9 -npm run dev <br>
+<hr>
+<h1>
+email admin is
+admin@admin.com
+
+password 
+12345678
+</h1>
