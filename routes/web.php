@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\lib\Ghanem_Kashier\paymentRequest;
 use Illuminate\Support\Facades\Request;
-Route::get('login', [LoginController::class, 'userLoginForm'])->name('login');
+Route::get('login', [LoginController::class, 'adminLoginForm'])->name('login');
 Route::get('admin/login', [LoginController::class, 'adminLoginForm'])->name('adminLoginForm');
-Route::post('login', [LoginController::class, 'userlogin']);
+Route::post('login', [LoginController::class, 'adminLogin']);
 Route::post('admin/login', [LoginController::class, 'adminLogin']);
 Route::post('logout', [LoginController::class, 'destroy'])->middleware('auth');
 
