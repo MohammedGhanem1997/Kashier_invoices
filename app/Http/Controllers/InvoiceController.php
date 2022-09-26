@@ -45,16 +45,19 @@ class InvoiceController extends Controller
      */
     public function store($installment, $response )
     {
+if( count($response)>0){
+
+
 
 
         $invoice=\App\Models\Invoice::create([
 
        'customerName'=> isset($response[ 'customerName'])?$response[ 'customerName']:'-',
          'transaction_id'=>  isset($response[ '_id'])?$response[ '_id']:'-',
-        'totalAmount'=>$response['totalAmount'],
-       'dueDate'=>$response['dueDate'],
-       'paymentRequestId'=>$response['paymentRequestId'],
-        'paymentStatus'=>$response['paymentStatus'],
+        'totalAmount'=>isset($response[ 'totalAmount'])?$response[ 'totalAmount']:$installment->totalAmount,
+       'dueDate'=>isset($response[ 'dueDate'])?$response[ 'dueDate']:$installment->dueDate,
+       'paymentRequestId'=>isset($response[ 'paymentRequestId'])?$response[ 'paymentRequestId']:'-',
+        'paymentStatus'=>isset($response[ 'paymentStatus'])?$response[ 'paymentStatus']:'-',
        'email'=>$installment->order->email,
        'user_id'=>$installment->order->user_id,
         'installment_id'=>$installment->id,
@@ -65,6 +68,9 @@ class InvoiceController extends Controller
 
 
         return $invoice ;
+}
+
+return 0 ;
     }
 
     /**

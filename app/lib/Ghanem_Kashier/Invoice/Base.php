@@ -21,9 +21,15 @@ public function __construct()
 
         $response=  $invoic->store($installment,$response["response"]);
 
-           $share= $this->ShareInvoice($response);
+        if ($response){
 
-       return $share;
+            $share= $this->ShareInvoice($response);
+            return $share;
+        }
+
+        return ["message"=>'error plz try again'] ;
+
+
     }
 
     public function Show_Invoice($invoice){
